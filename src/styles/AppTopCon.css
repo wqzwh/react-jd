@@ -1,0 +1,103 @@
+.campInfo .icon {
+	height: .75rem;
+	width: .75rem;
+	margin-right: .5rem
+}
+.container {
+    background-color: #fff;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+.campInfo .campInfo-coverPhoto {
+	width: 100%;
+	height: 12rem;
+	background-size: cover;
+	background-position: 50%;
+	background-image:url('../images/123.jpg');
+}
+
+.campInfo .campInfo-campName {
+	height: 2.1rem;
+	line-height: 2.1rem;
+	font-size: .75rem;
+	padding-left: .45rem
+}
+
+.campInfo .campInfo-info {
+	top: -1px;
+	position: relative;
+	padding: .75rem .5rem;
+	min-height: 3.75rem;
+	font-size: .6rem
+}
+
+.campInfo .campInfo-info .campInfo-phone {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: .75rem
+}
+
+.campInfo .campInfo-info .campInfo-phone img {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+
+.campInfo .campInfo-info .campInfo-phone article {
+	width: 13.75rem;
+	float: left;
+	margin-left: 1.25rem;
+	display: inline-block
+}
+
+.campInfo .campInfo-info .campInfo-address {
+	overflow: hidden;
+	position: relative
+}
+
+.campInfo .campInfo-info .campInfo-address img {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+
+.campInfo .campInfo-info .campInfo-address article {
+	width: 13.75rem;
+	float: left;
+	margin-left: 1.25rem;
+	display: inline-block
+}
+
+.campInfo .campInfo-notice {
+	overflow: hidden;
+	position: relative;
+	padding: .75rem .5rem;
+	margin-top: .75rem;
+	min-height: 3.75rem;
+	font-size: .6rem
+}
+
+.campInfo .campInfo-notice .campInfo-noticeIcon {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+
+.campInfo .campInfo-notice .campInfo-noticeContent {
+	width: 13.75rem;
+	margin-left: 1.25rem
+}
+
+.campInfo .campInfo-notice .campInfo-noticeContent p {
+	margin-top: .75rem;
+	margin-bottom: 0
+}
+
+.campInfo p {
+	margin-bottom: .75rem;
+	line-height: .75rem;
+	height: .75rem
+}
