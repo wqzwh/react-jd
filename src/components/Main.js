@@ -8,14 +8,15 @@ require('styles/AppCart.css');
 require('styles/AppDatePicker.css');
 
 import React from 'react';
-import HeadNav from 'components/HeadNav.js';
-import AppTopCon from 'components/AppTopCon.js';
-import AppZhuSu from 'components/AppZhuSu.js';
-import AppFoot from 'components/AppFoot.js';
-import AppCart from 'components/AppCart.js';
-import AppDatePicker from 'components/AppDatePicker.js';
+import HeadNav from 'components/HeadNav';
+import AppTopCon from 'components/AppTopCon';
+import AppZhuSu from 'components/AppZhuSu';
+import AppFoot from 'components/AppFoot';
+import AppCart from 'components/AppCart';
+import AppDatePicker from 'components/AppDatePicker';
 
-class AppComponent extends React.Component {
+
+class App extends React.Component {
   render() {
     return (
     	<div>
@@ -34,8 +35,7 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
+App.defaultProps = {
 
 };
-
-export default AppComponent;
+export default App;

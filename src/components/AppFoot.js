@@ -24,7 +24,7 @@ class AppFoot extends React.Component{
 					<div className="tabBar-link tabBar-Category ">分类</div>
 					</div>
 					<div className="tabBar-link-container">
-						<a className="tabBar-link" href="">我的订单</a>
+						<a className="tabBar-link" href="/login">我的订单</a>
 					</div>
 				</footer>
 			</div>
