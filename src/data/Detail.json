@@ -1,0 +1,55 @@
+[
+	{
+		"id":"1",
+		"pics":[
+				{
+					"url":"http://image.tianjimedia.com/uploadImages/2011/286/8X76S7XD89VU.jpg",
+					"alt":"介绍一"
+				},
+				{
+					"url":"http://image.tianjimedia.com/uploadImages/2011/286/8X76S7XD89VU.jpg",
+					"alt":"介绍二"
+				}
+			],
+		"title":"海边",
+		"number":"3",
+		"price":"10.00",
+		"sheShi":{
+			"Toilet":"公共厕所",
+			"zaoCan":"面包"
+		},
+		"jieShao":{
+			"Area":"14",
+			"chuangXing":"单人",
+			"beiZhu":"备注信息"
+		}
+
+	},
+	{
+		"id":"2",
+		"pics":[
+				{
+					"url":"http://imgsrc.baidu.com/forum/w%3D580/sign=d5a395f962d0f703e6b295d438f85148/9c670c338744ebf845fca7d1d9f9d72a6159a753.jpg",
+					"alt":"介绍一"
+				},
+				{
+					"url":"http://imgsrc.baidu.com/forum/w%3D580/sign=d5a395f962d0f703e6b295d438f85148/9c670c338744ebf845fca7d1d9f9d72a6159a753.jpg",
+					"alt":"介绍二"
+				}
+			],
+		"title":"海边2",
+		"number":"2",
+		"price":"5.00",
+		"sheShi":{
+			"Toilet":"公共厕所",
+			"zaoCan":"面包"
+		},
+		"jieShao":{
+			"Area":"14",
+			"chuangXing":"单人",
+			"beiZhu":"备注信息"
+		}
+
+	}
+
+]

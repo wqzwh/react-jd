@@ -15,24 +15,45 @@ import AppFoot from 'components/AppFoot';
 import AppCart from 'components/AppCart';
 import AppDatePicker from 'components/AppDatePicker';
 
+// 引入json数据
+let Details=require('../data/Detail.json');
 
 class App extends React.Component {
-  render() {
-    return (
-    	<div>
-			<div className="index">
-				<HeadNav />
-				<AppTopCon />
-				<AppZhuSu />
-			</div>
-			<AppCart />
-			<div className="AppFoot">
-				<AppFoot />
-			</div>
-			<AppDatePicker />
-		</div>	
-    );
-  }
+
+	constructor(props) {
+	    super(props);
+	    this.state = {
+	    	displayStyle:true,
+	    	data:Details,
+	    };
+	}
+
+	handleToggle(){
+		console.log(this);
+		this.setState({
+			displayStyle: !this.state.displayStyle,
+		});
+	}
+
+	render() {
+	    return (
+	    	<div>
+				<div className="index">
+					<HeadNav />
+					<AppTopCon />
+					<AppZhuSu
+						DetailsData={this.state.data} />
+				</div>
+				<AppCart />
+				<div className="AppFoot">
+					<AppFoot 
+						handleToggle={this.handleToggle.bind(this)} 
+						displayStyle={this.state.displayStyle}/>
+				</div>
+				<AppDatePicker />
+			</div>	
+	    );
+	}
 }
 
 App.defaultProps = {

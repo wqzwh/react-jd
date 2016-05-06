@@ -1,35 +1,38 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class AppFoot extends React.Component{
 	render(){
+		let ObjStyle={
+			display:this.props.displayStyle ? 'none': 'block',
+		}
 		return (
 			<div>
 				<div className="AppFoot_div1"></div>
 				<footer className="tabBar">
 					<div className="tabBar-link-container">
-						<a className="tabBar-link active" href="">主页</a>
+						<Link className="tabBar-link active" to="/">主页</Link>
 					</div>
 					<div className="tabBar-link-container">
-						<div className="tabBar-categoryMenu">
-						<div className="tabBar-categoryMenu-sub">
-							<a className="tabBar-link" href="">住宿</a>
+						<div className="tabBar-categoryMenu" style={ ObjStyle }>
+							<div className="tabBar-categoryMenu-sub">
+								<Link className="tabBar-link" to="/category/room">住宿</Link>
+							</div>
+							<div className="tabBar-categoryMenu-sub">
+								<a className="tabBar-link" href="">餐饮</a>
+							</div>
+							<div className="tabBar-categoryMenu-sub">
+								<a className="tabBar-link" href="">娱乐</a>
+							</div>
 						</div>
-						<div className="tabBar-categoryMenu-sub">
-							<a className="tabBar-link" href="">餐饮</a>
-						</div>
-						<div className="tabBar-categoryMenu-sub">
-							<a className="tabBar-link" href="">娱乐</a>
-						</div>
-					</div>
-					<div className="tabBar-link tabBar-Category ">分类</div>
+						<div className="tabBar-link tabBar-Category" onClick={this.props.handleToggle}>分类</div>
 					</div>
 					<div className="tabBar-link-container">
-						<a className="tabBar-link" href="/login">我的订单</a>
+						<Link className="tabBar-link" to="/login">我的订单</Link>
 					</div>
 				</footer>
 			</div>
 			);
 	}
 }
-
 export default AppFoot;

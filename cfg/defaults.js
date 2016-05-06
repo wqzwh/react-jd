@@ -27,8 +27,12 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!postcss-loader!less-loader'
       },
       {
-        test: /\.styl/,
+        test: /\.style/,
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
+      },
+      { //添加解析json文件模块
+        test:/\.json$/,
+        loader:'json-loader'
       },
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
