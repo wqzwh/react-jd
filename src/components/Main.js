@@ -29,7 +29,6 @@ class App extends React.Component {
 	}
 
 	handleToggle(){
-		console.log(this);
 		this.setState({
 			displayStyle: !this.state.displayStyle,
 		});

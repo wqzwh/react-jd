@@ -8,6 +8,7 @@ class AppFoot extends React.Component{
 		}
 		return (
 			<div>
+				<div className="AppFoot_mask" style={ ObjStyle } onClick={this.props.handleToggle}></div>
 				<div className="AppFoot_div1"></div>
 				<footer className="tabBar">
 					<div className="tabBar-link-container">

@@ -6,7 +6,8 @@
 	border-top: 1px solid #e3e3e3;
 	position: fixed;
 	bottom: 0;
-	width: 100%
+	width: 100%;
+	z-index: 333;
 }
 
 .tabBar .active {
@@ -42,4 +43,14 @@
 }
 .AppFoot_div1{
 	height:2.5rem
+}
+.AppFoot_mask{
+	position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 33;
+    display: none;
 }
