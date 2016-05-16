@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class AppZhuSuItems extends React.Component{
 	render(){
@@ -6,7 +7,7 @@ class AppZhuSuItems extends React.Component{
 			<div className="item container">
 				<img className="img1" src={this.props.suoimgurl} />
 				<div className="div1">
-					<p className="p1">{this.props.title}</p>
+					<p className="p1"><Link to={`/category/room/${this.props.id}`}>{this.props.title}</Link></p>
 					<p className="p2">
 						<span>可住</span>
 						<span>{this.props.number}</span>

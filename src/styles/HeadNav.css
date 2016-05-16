@@ -1,4 +1,7 @@
 /*HeadNav*/
+.nav{
+	height: 52px;
+}
 .nav .nav-container {
 	position: fixed;
 	top: 0;

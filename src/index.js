@@ -13,7 +13,10 @@ ReactDOM.render(
 	    <Route path="/" component={App}></Route>
 	    <Route path="login" component={AppLogin}></Route>
 	    <Route path="detail" component={AppDetail}></Route>
-	    <Route path="/category/room" component={AppCategoryRoom}></Route>
+	    <Route path="/category/room" component={AppCategoryRoom}>
+	    	<Route path="/category/room/:roomId" name="room" component={AppDetail}/>
+        	<Route path="*" component={NoMatch}/>
+	    </Route>
 	    <Route path="*" component={NoMatch}/>
     </Router>
 	, document.getElementById('app'));
