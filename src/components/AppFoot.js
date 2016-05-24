@@ -17,7 +17,7 @@ class AppFoot extends React.Component{
 					<div className="tabBar-link-container">
 						<div className="tabBar-categoryMenu" style={ ObjStyle }>
 							<div className="tabBar-categoryMenu-sub">
-								<Link className="tabBar-link" to="/category/room">住宿</Link>
+								<Link className="tabBar-link" to="/rooms">住宿</Link>
 							</div>
 							<div className="tabBar-categoryMenu-sub">
 								<a className="tabBar-link" href="">餐饮</a>

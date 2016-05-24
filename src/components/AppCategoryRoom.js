@@ -43,8 +43,11 @@ class AppCategoryRoom extends React.Component{
 				<AppFoot 
 					handleToggle={this.handleToggle.bind(this)} 
 					displayStyle={this.state.displayStyle}/>
+				{this.props.children}	
 			</div>	
+
 			);
+
 	}
 }
 

@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class HeadNav extends React.Component {
 	render() {
 		return (
 			<nav className="nav">
 				<div className="nav-container">
+					<Link to="/"><span className="nav-back"></span></Link>
 					<p className="nav-title">我的顶部</p>
 					<span className="nav-shopCart">
 						<img src="../images/cart@2x.png"/>
@@ -14,5 +16,4 @@ class HeadNav extends React.Component {
 			);
 	}
 }
-
 export default HeadNav;

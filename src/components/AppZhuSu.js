@@ -23,7 +23,7 @@ class AppZhuSu extends React.Component{
 				<p className="AppZhuSu_tittle">住宿</p>
 					{ZhuSuItems}
 				<div className="container wqcontainer">
-					<Link to="/category/room">查看更多</Link>
+					<Link to="/rooms">查看更多</Link>
 				</div>
 			</div>	
 			);

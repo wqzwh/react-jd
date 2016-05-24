@@ -1,0 +1,325 @@
+.slick-slider {
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent
+}
+
+.slick-list,.slick-slider {
+	position: relative;
+	display: block
+}
+
+.slick-list {
+	overflow: hidden;
+	margin: 0;
+	padding: 0
+}
+
+.slick-list:focus {
+	outline: none
+}
+
+.slick-list.dragging {
+	cursor: pointer;
+	cursor: hand
+}
+
+.slick-slider .slick-list,.slick-slider .slick-track {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0)
+}
+
+.slick-track {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block
+}
+
+.slick-track:after,.slick-track:before {
+	display: table;
+	content: ''
+}
+
+.slick-track:after {
+	clear: both
+}
+
+.slick-loading .slick-track {
+	visibility: hidden
+}
+
+.slick-slide {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px
+}[dir=rtl] .slick-slide {
+	float: right
+}
+
+.slick-slide img {
+	display: block
+}
+
+.slick-slide.slick-loading img {
+	display: none
+}
+
+.slick-slide.dragging img {
+	pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+	display: block
+}
+
+.slick-loading .slick-slide {
+	visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+	display: block;
+	height: auto;
+	border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+	display: none
+}
+.slider-img{
+	height: 12rem; 
+	width: 1242px; 
+	background-image: url('../images/123.jpg'); 
+	background-size: cover; 
+	background-position: 50% 50%;
+}
+.slider .slider-img {
+	height: 12rem!important;
+	background-size: cover;
+	background-position: 50%;
+	width: 100%
+}
+
+.slider .slick-dots {
+	display: block;
+	position: absolute;
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	width: 100%;
+	bottom: .7rem
+}
+
+.slider .slick-dots li {
+	position: relative;
+	display: inline-block;
+	height: .5rem;
+	width: .5rem;
+	margin: 0 .125rem;
+	padding: 0;
+	cursor: pointer
+}
+
+.slider .slick-dots button {
+	border: 0;
+	background: 0 0;
+	display: block;
+	height: .5rem;
+	width: .5rem;
+	outline: 0;
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+	padding: .125rem;
+	cursor: pointer
+}
+
+.slider .slick-dots button:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "\2022";
+	width: .5rem;
+	height: .5rem;
+	font-size: 2rem;
+	line-height: .5rem;
+	text-align: center;
+	color: #000;
+	opacity: .25
+}
+
+.slider .slick-dots li.slick-active button:before {
+	color: #1699de;
+	opacity: .75
+}
+
+.detail .title {
+	background: #fff;
+	border-color: #e3e3e3;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	overflow: hidden
+}
+
+.detail .title .desc {
+	float: left;
+	margin-left: .375rem;
+	padding: .5rem 0
+}
+
+.detail .title .desc h3 {
+	font-size: .65rem;
+	font-weight: 400;
+	color: #333
+}
+
+.detail .title .desc h4 {
+	font-size: .6rem;
+	font-weight: 400;
+	color: #666
+}
+
+.detail .title .price {
+	float: right;
+	color: #1699de;
+	font-size: .55rem;
+	margin-right: .375rem;
+	margin-top: .625rem
+}
+
+.detail .title .price b {
+	font-size: .75rem;
+	font-weight: 400
+}
+
+.detail {
+	padding-bottom: 2.5rem
+}
+
+.detail>div>h5 {
+	color: #333;
+	font-size: .6rem;
+	margin-left: .375rem
+}
+
+.detail .content-container {
+	margin: .7rem 0;
+	padding: .5rem .375rem;
+	background: #fff;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3
+}
+
+.detail .time {
+	background-image: url("http://7xsrk6.com2.z0.glb.qiniucdn.com/arrow.png");
+	background-repeat: no-repeat;
+	background-position: 98% 50%;
+	font-size: .65rem;
+	background-size: .45rem .825rem
+}
+
+.detail .time span {
+	color: #666;
+	margin-right: .175rem
+}
+
+.detail .time span b {
+	color: #333;
+	font-weight: 400;
+	margin-right: .375rem
+}
+
+.detail .time .divider {
+	display: inline-block;
+	width: 1px;
+	height: .5rem;
+	background: #e3e3e3;
+	margin-right: .375rem
+}
+
+.detail .equipment {
+	margin-top: 0;
+	overflow: hidden;
+	font-size: .7rem
+}
+
+.detail .equipment li {
+	list-style: none;
+	color: #333;
+	font-size: .7rem;
+	float: left;
+	width: 7.5rem
+}
+
+.detail .equipment li:before {
+	content: "";
+	display: inline-block;
+	width: .75rem;
+	height: .625rem;
+	margin-top: .125rem;
+	margin-right: .125rem
+}
+
+.detail .equipment li.on:before {
+	background-image: url("http://7xsrk6.com2.z0.glb.qiniucdn.com/sale-website/image/gou.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: .75rem .625rem
+}
+
+.detail .description {
+	margin-top: 0
+}
+
+.detail .description ul {
+	overflow: hidden;
+	margin-bottom: .5rem
+}
+
+.detail .description li {
+	list-style: none;
+	color: #666;
+	font-size: .6rem;
+	float: left;
+	width: 7.5rem
+}
+
+.detail .description article {
+	font-size: .6rem;
+	color: #333
+}
+
+.detail .bottom-button {
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	border-top: 1px solid #e3e3e3;
+	width: 100%
+}
+
+.detail .bottom-button li {
+	float: left;
+	width: 50%;
+	height: 2.2rem;
+	text-align: center;
+	line-height: 2.2rem;
+	font-size: .75rem;
+	color: #1699de;
+	background: #fff
+}
+
+.detail .bottom-button li:nth-child(2) {
+	background: #1699de;
+	color: #fff
+}
+.slick-dots{
+	display: block;
+}
