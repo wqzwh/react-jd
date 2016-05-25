@@ -3,46 +3,71 @@ require('styles/AppDatePicker.css');
 require('styles/AppCart.css');
 
 import React from 'react';
+import Slider from 'react-slick';
 import HeadNav from 'components/HeadNav';
 import AppCart from 'components/AppCart';
 import AppDatePicker from 'components/AppDatePicker';
 
-// 引入json数据
-let Details=require('../data/Detail.json');
-
 class AppDetail extends React.Component{
+	// 定义内容组件自己的状态
+	constructor(props) {
+	    super(props);
+	    this.state = {
+	    	data:[],
+	    };
+	}
+	// 在渲染dom之前调用，获取数据
+	componentWillMount(){
+		// 引入json数据
+		let Details=require('../data/Detail.json');
+		this.setState({
+			data:Details
+		});
+	}
+	// 熏染数据
 	render(){
-		console.log(this.props.params);
+		// 根据路由定义的路径获取相应id对应的数据
+		let newData=this.state.data[this.props.params.roomId];
+		let imgitems=newData.pics.map(function (value,index){
+			return (
+				<div className="slider-img" key={index} alt={value.alt} style={{backgroundImage:'url(' + value.url + ')'}} data-index={index}></div>
+				)
+		});
+		let settings={
+			dots: true,
+		    infinite: true,
+		    speed: 500,
+		    adaptiveHeight:true,//自动调节幻灯片的高度
+		    // className:'slick-active',
+		    // dotsClass:'slick-active',
+		    arrows:false,
+		    slidesToShow: 1,
+		    slidesToScroll: 1,
+		    autoplay:true,
+		    centerMode:true,
+		    lazyLoad:true
+		};
 		return (
 			<div className="detail">
 				<HeadNav />
 				<div className="slider">
-					<div className="slick-initialized slick-slider">
-						<div className="slick-list">
-							<div className="slick-track">
-								<div className="slick-slide slick-active slider-img" data-index="-1"></div>
-							</div>
-						</div>
-						<ul className="slick-dots">
-							<li className="">
-								<button>1</button>
-							</li>
-						</ul>
-					</div>
+					<Slider {...settings}>
+						{imgitems}
+					</Slider>
 				</div>
 				<div className="title">
 					<div className="desc">
-						<h3>海边独栋木屋</h3>
+						<h3>{newData.title}</h3>
 						<h4>
 							<span>可住</span>
-							<span>3</span>
+							<span>{newData.number}</span>
 							<span>人</span>
 						</h4>
 					</div>
 					<div className="price">
 						<span>￥</span>
 						<b>
-							<span>0.01</span>
+							<span>{newData.price}</span>
 							<span>/晚</span>
 						</b>
 					</div>
@@ -51,7 +76,10 @@ class AppDetail extends React.Component{
 					<h5>房间设施</h5>
 					<div className="equipment content-container">
 						<li className="on">
-							<span>看，界面</span>
+							<span>{newData.sheShi.Toilet}</span>
+						</li>
+						<li className="on">
+							<span>{newData.sheShi.zaoCan}</span>
 						</li>
 					</div>
 					<h5>房间介绍</h5>
@@ -59,15 +87,15 @@ class AppDetail extends React.Component{
 						<ul>
 							<li>
 								<span>房间面积:</span>
-								<span>6</span>
+								<span>{newData.jieShao.Area}</span>
 								<span>m²</span>
 							</li>
 							<li>
 								<span>床型:</span>
-								<span>6666</span>
+								<span>{newData.jieShao.chuangXing}</span>
 							</li>
 						</ul>
-						<article>buyunxudaichongwu</article>
+						<article>{newData.jieShao.beiZhu}</article>
 					</div>	
 				</div>
 				<div className="bottom-button">

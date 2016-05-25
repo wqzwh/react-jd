@@ -95,11 +95,11 @@
 	display: none
 }
 .slider-img{
-	height: 12rem; 
+	/*height: 12rem; 
 	width: 1242px; 
 	background-image: url('../images/123.jpg'); 
 	background-size: cover; 
-	background-position: 50% 50%;
+	background-position: 50% 50%;*/
 }
 .slider .slider-img {
 	height: 12rem!important;

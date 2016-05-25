@@ -4,11 +4,13 @@
 		"pics":[
 				{
 					"url":"http://image.tianjimedia.com/uploadImages/2011/286/8X76S7XD89VU.jpg",
-					"alt":"介绍一"
+					"alt":"介绍一",
+					"id":"1"
 				},
 				{
-					"url":"http://image.tianjimedia.com/uploadImages/2011/286/8X76S7XD89VU.jpg",
-					"alt":"介绍二"
+					"url":"http://image.tuwang.com/Nature/FengGuang-1600-1200/FengGuang_pic_abx@DaTuKu.org.jpg",
+					"alt":"介绍二",
+					"id":"2"
 				}
 			],
 		"title":"海边",
