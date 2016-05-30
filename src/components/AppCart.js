@@ -1,12 +1,22 @@
 import React from 'react';
 
 class AppCart extends React.Component{
+	
 	render(){
+		console.log(this.props.DetailsData);
+		console.log(this.props.cartId);
+		let newData=this.props.DetailsData[this.props.cartId];
+		let ObjStyle={
+			display:this.props.AppCartDisplay ? 'none': 'block',
+		}
+		let BackgroundImg={
+			backgroundImage:'url(' + newData.pics[0].url + ')'
+		}		
 		return (
-			<div className="joinCart-container">
-				<div className="joinCart-mask"></div>
+			<div className="joinCart-container" style={ ObjStyle }>
+				<div className="joinCart-mask" onClick={this.props.handleAppCartDisplay}></div>
 				<div className="joinCart">
-					<div className="joinCart-itemPhoto"></div>
+					<div className="joinCart-itemPhoto" style={ BackgroundImg}></div>
 					<div className="joinCart-info">
 						<div className="joinCart-infoSub">
 							<p className="joinCart-itemName"></p>
@@ -17,8 +27,7 @@ class AppCart extends React.Component{
 						</div>
 						<p className="joinCart-price">
 							<span>￥</span>
-							<span>0.01</span>
-							<span>起</span>
+							<span>{newData.price}</span>
 						</p>
 					</div>
 					<div className="joinCart-datePicker">

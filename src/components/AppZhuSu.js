@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 
 class AppZhuSu extends React.Component{
 	render(){
-		console.log(this.props.DetailsData);
+		// console.log(this.props.DetailsData);
 		if(!Array.isArray(this.props.DetailsData)) throw new Error('this.props.DetailsData问题必须是数组');
 		
 		let ZhuSuItems=this.props.DetailsData.map(function(value,index){
@@ -14,7 +14,8 @@ class AppZhuSu extends React.Component{
 								id={index}
 								kezhu={value.number}
 								suoimgurl={value.pics[0].url}
-								price={value.price} />
+								price={value.price} 
+								handleAppCartDisplay={this.props.handleAppCartDisplay}/>
 				);
 		}.bind(this));
 		

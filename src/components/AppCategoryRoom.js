@@ -5,6 +5,7 @@ import React from 'react';
 import AppFoot from 'components/AppFoot';
 import HeadNav from 'components/HeadNav';
 import AppZhuSuItems from 'components/AppZhuSuItems';
+import AppCart from 'components/AppCart';
 // 引入json数据
 let Details=require('../data/Detail.json');
 
@@ -13,7 +14,10 @@ class AppCategoryRoom extends React.Component{
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	    	displayStyle:true
+	    	displayStyle:true,
+	    	AppCartDisplay:true,
+	    	cartId:0,
+	    	data:Details,
 	    };
 	}
 
@@ -21,6 +25,21 @@ class AppCategoryRoom extends React.Component{
 		this.setState({
 			displayStyle: !this.state.displayStyle,
 		});
+	}
+
+	handleAppCartDisplay(e){
+		this.setState({
+			AppCartDisplay: !this.state.AppCartDisplay,
+		});
+
+		let cartAddId=e.target.id;
+
+		if(cartAddId!=''){
+			this.setState({
+				cartId: cartAddId,
+			});
+		}
+
 	}
 
 	render(){
@@ -32,7 +51,9 @@ class AppCategoryRoom extends React.Component{
 								id={index}
 								kezhu={value.number}
 								suoimgurl={value.pics[0].url}
-								price={value.price} />
+								price={value.price} 
+								handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}
+								AppCartDisplay={this.state.AppCartDisplay}/>
 				);
 		}.bind(this));
 
@@ -43,7 +64,11 @@ class AppCategoryRoom extends React.Component{
 				<AppFoot 
 					handleToggle={this.handleToggle.bind(this)} 
 					displayStyle={this.state.displayStyle}/>
-				{this.props.children}	
+				<AppCart 
+					DetailsData={this.state.data}
+					cartId={this.state.cartId}
+					handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}
+					AppCartDisplay={this.state.AppCartDisplay}/>	
 			</div>	
 
 			);

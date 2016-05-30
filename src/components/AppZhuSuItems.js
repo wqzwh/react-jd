@@ -21,7 +21,7 @@ class AppZhuSuItems extends React.Component{
 						<span>&nbsp;</span>
 						<span className="span4">起</span>
 					</p>
-					<img src="../images/cart_add@2x.png" />
+					<img onClick={this.props.handleAppCartDisplay.bind(this)} id={this.props.id} src="../images/cart_add@2x.png" />
 				</div>
 			</div>
 			);

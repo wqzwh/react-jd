@@ -14,6 +14,8 @@ class AppDetail extends React.Component{
 	    super(props);
 	    this.state = {
 	    	data:[],
+	    	AppCartDisplay:true,
+	    	cartId:0
 	    };
 	}
 	// 在渲染dom之前调用，获取数据
@@ -21,8 +23,22 @@ class AppDetail extends React.Component{
 		// 引入json数据
 		let Details=require('../data/Detail.json');
 		this.setState({
-			data:Details
+			data:Details,
 		});
+	}
+
+	handleAppCartDisplay(e){
+		this.setState({
+			AppCartDisplay: !this.state.AppCartDisplay,
+		});
+		console.log(e);
+
+		let cartAddId=e.target.id;
+		if(cartAddId!=''){
+			this.setState({
+				cartId: cartAddId,	
+			});
+		}
 	}
 	// 熏染数据
 	render(){
@@ -101,11 +117,15 @@ class AppDetail extends React.Component{
 				<div className="bottom-button">
 					<ul>
 						<li>立即购买</li>
-						<li>加入购物车</li>
+						<li onClick={this.handleAppCartDisplay.bind(this)} id={newData.id}>加入购物车</li>
 					</ul>
 				</div>
 				<AppDatePicker />
-				<AppCart />
+				<AppCart 
+					DetailsData={this.state.data}
+					cartId={this.state.cartId}
+					handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}
+					AppCartDisplay={this.state.AppCartDisplay}/>
 			</div>
 			);
 	}

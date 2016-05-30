@@ -25,6 +25,8 @@ class App extends React.Component {
 	    this.state = {
 	    	displayStyle:true,
 	    	data:Details,
+	    	AppCartDisplay:true,
+	    	cartId:0
 	    };
 	}
 
@@ -34,6 +36,21 @@ class App extends React.Component {
 		});
 	}
 
+	handleAppCartDisplay(e){
+		this.setState({
+			AppCartDisplay: !this.state.AppCartDisplay,
+			
+		});
+
+		let cartAddId=e.target.id;
+		if(cartAddId!=''){
+			this.setState({
+				cartId: cartAddId,	
+			});
+		}
+		// console.log(e.target.id);
+	}
+
 	render() {
 	    return (
 	    	<div>
@@ -41,9 +58,16 @@ class App extends React.Component {
 					<HeadNav />
 					<AppTopCon />
 					<AppZhuSu
-						DetailsData={this.state.data} />
+						DetailsData={this.state.data} 
+						handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}/>
 				</div>
-				<AppCart />
+
+				<AppCart 
+					DetailsData={this.state.data}
+					cartId={this.state.cartId}
+					handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}
+					AppCartDisplay={this.state.AppCartDisplay}/>
+
 				<div className="AppFoot">
 					<AppFoot 
 						handleToggle={this.handleToggle.bind(this)} 
