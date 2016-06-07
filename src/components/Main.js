@@ -26,7 +26,10 @@ class App extends React.Component {
 	    	displayStyle:true,
 	    	data:Details,
 	    	AppCartDisplay:true,
-	    	cartId:0
+	    	cartId:0,
+	    	CartDate:'选择时间',//购物车选择时间
+	    	CartCount:1,//购物车中计数器
+	    	HeadNavCartCount:0// 顶部购物车计数器
 	    };
 	}
 
@@ -34,6 +37,17 @@ class App extends React.Component {
 		this.setState({
 			displayStyle: !this.state.displayStyle,
 		});
+	}
+
+	// 点击加入购物车调用的方法
+	HandlerJoinCart(){
+		this.setState({
+			AppCartDisplay: !this.state.AppCartDisplay,
+			HeadNavCartCount:this.state.HeadNavCartCount+1
+		});
+
+		
+
 	}
 
 	handleAppCartDisplay(e){
@@ -45,17 +59,16 @@ class App extends React.Component {
 		let cartAddId=e.target.id;
 		if(cartAddId!=''){
 			this.setState({
-				cartId: cartAddId,	
+				cartId: e.target.id,	
 			});
 		}
-		// console.log(e.target.id);
 	}
 
 	render() {
 	    return (
 	    	<div>
 				<div className="index">
-					<HeadNav />
+					<HeadNav HeadNavCartCount={this.state.HeadNavCartCount}/>
 					<AppTopCon />
 					<AppZhuSu
 						DetailsData={this.state.data} 
@@ -64,6 +77,9 @@ class App extends React.Component {
 
 				<AppCart 
 					DetailsData={this.state.data}
+					CartDate={this.state.CartDate}
+					CartCount={this.state.CartCount}
+					HandlerJoinCart={this.HandlerJoinCart.bind(this)}
 					cartId={this.state.cartId}
 					handleAppCartDisplay={this.handleAppCartDisplay.bind(this)}
 					AppCartDisplay={this.state.AppCartDisplay}/>

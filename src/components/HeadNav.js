@@ -10,6 +10,7 @@ class HeadNav extends React.Component {
 					<p className="nav-title">我的顶部</p>
 					<span className="nav-shopCart">
 						<img src="../images/cart@2x.png"/>
+						<Link to="ShopCart"><span className="nav-shopCart-num">{this.props.HeadNavCartCount}</span></Link>
 					</span>
 				</div>
 			</nav>

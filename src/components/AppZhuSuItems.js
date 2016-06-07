@@ -27,5 +27,4 @@ class AppZhuSuItems extends React.Component{
 			);
 	}
 }
-
 export default AppZhuSuItems;
