@@ -12,7 +12,7 @@ class AppCart extends React.Component{
 	    	flag:false
 	    };
 	}
-
+   
 
 	handlerChange(e){
 		this.setState({

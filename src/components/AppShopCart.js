@@ -9,7 +9,7 @@ class AppShopCart extends React.Component {
 			<div className="shopCart">
 				<nav className="nav">
 					<div className="nav-container">
-						<span className="nav-back"></span>
+						<Link to="/"><span className="nav-back"></span></Link>
 						<p className="nav-title">购物车</p>
 					</div>
 					<div className="nav-padding"></div>
@@ -33,7 +33,7 @@ class AppShopCart extends React.Component {
 							<p className="shopCart-date">
 								<span>2016-06-09</span>
 								<span> - </span>
-								<span>2016-06-10</span>
+								<span></span>
 							</p>
 							<p className="shopCart-counter">
 								<span>-</span>
@@ -61,7 +61,7 @@ class AppShopCart extends React.Component {
 					</button>
 				</footer>
 			</div>
-			);
+		);
 	}
 }
 export default AppShopCart;

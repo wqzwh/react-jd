@@ -46,8 +46,6 @@ class App extends React.Component {
 			HeadNavCartCount:this.state.HeadNavCartCount+1
 		});
 
-		
-
 	}
 
 	handleAppCartDisplay(e){
