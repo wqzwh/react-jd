@@ -1,0 +1,56 @@
+/**/
+.tabBar {
+	height: 2.25rem;
+	background-color: #fff;
+	border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #e3e3e3;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 333;
+}
+
+.tabBar .active {
+	color: #1699de!important
+}
+
+.tabBar .tabBar-link-container {
+	width: 33.3%;
+	float: left;
+	text-align: center;
+	font-size: .6rem;
+	line-height: 2.25rem
+}
+
+.tabBar .tabBar-categoryMenu {
+	position: absolute;
+	border: 1px solid #e3e3e3;
+	border-bottom: 0;
+	width: 33.3%;
+	bottom: 2.25rem;
+	background-color: #fff;
+	display: none;
+}
+
+.tabBar .tabBar-categoryMenu .tabBar-categoryMenu-sub {
+	height: 1.3rem;
+	text-align: center;
+	line-height: 1.3rem
+}
+
+.tabBar .tabBar-link {
+	color: #a0a0a0
+}
+.AppFoot_div1{
+	height:2.5rem
+}
+.AppFoot_mask{
+	position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 33;
+    display: none;
+}

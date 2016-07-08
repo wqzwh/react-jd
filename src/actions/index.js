@@ -1,0 +1,51 @@
+import getData from '../data/getData'
+import * as types from '../constants/ActionTypes'
+
+function receiveProducts(data) {
+  return {
+    type: types.RECEIVE_PRODUCTS,
+    info: data
+  }
+}
+
+export function getAllProducts() {
+  return dispatch => {
+    getData.getProducts(data => {
+      dispatch(receiveProducts(data))
+    })
+  }
+}
+
+function addToCartUnsafe(productId) {
+  return {
+    type: types.ADD_TO_CART,
+    productId
+  }
+}
+
+export function addToCart(productId) {
+  // console.log(productId);
+  return (dispatch, getState) => {
+    if (getState().products.byId[productId].inventory > 0) {
+      dispatch(addToCartUnsafe(productId))
+    }
+  }
+}
+
+export function checkout(products) {
+  return (dispatch, getState) => {
+    const cart = getState().cart
+
+    dispatch({
+      type: types.CHECKOUT_REQUEST
+    })
+    shop.buyProducts(products, () => {
+      dispatch({
+        type: types.CHECKOUT_SUCCESS,
+        cart
+      })
+      // Replace the line above with line below to rollback on failure:
+      // dispatch({ type: types.CHECKOUT_FAILURE, cart })
+    })
+  }
+}

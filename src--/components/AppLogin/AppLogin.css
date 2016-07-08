@@ -1,0 +1,68 @@
+body {
+     margin: 0;
+    background-color: #f7f9fa;
+    color: #333;
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+.login input {
+	border: none;
+	text-indent: .375rem
+}
+
+.login .telephone {
+	margin-top: .75rem;
+	height: 1.925rem;
+	background: #fff;
+	line-height: 1.925rem;
+	font-size: .6rem;
+	overflow: hidden;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3
+}
+
+.login .telephone input {
+	width: 70%;
+	border: none;
+	float: left
+}
+
+.login .telephone .getCode {
+	float: left;
+	width: 30%;
+	text-align: center;
+	background: #1799df;
+	color: #fff;
+	border: 0
+}
+
+.login .code {
+	height: 1.925rem;
+	background: #fff;
+	line-height: 1.925rem;
+	font-size: .6rem
+}
+
+.login .code input {
+	width: 100%
+}
+
+.login .button {
+	width: 90%;
+	margin: .75rem auto;
+	text-align: center;
+	line-height: 1.875rem;
+	height: 1.875rem;
+	background: #1799df;
+	color: #fff;
+	font-size: .6rem;
+	border-radius: .25rem;
+	border: 0
+}
+
+.login .disabled {
+	background-color: rgba(22,153,222,.6)
+}

@@ -1,9 +1,11 @@
 import React from 'react';
-import AppZhuSuItems from 'components/AppZhuSuItems';
 import {Link} from 'react-router';
+import AppZhuSuItems from '../AppZhuSuItems/AppZhuSuItems';
+require ('./AppZhuSu.css');
 
 class AppZhuSu extends React.Component{
 	render(){
+		// console.log(this.props.DetailsData);
 		if(!Array.isArray(this.props.DetailsData)) throw new Error('this.props.DetailsData问题必须是数组');
 		
 		let ZhuSuItems=this.props.DetailsData.map(function(value,index){

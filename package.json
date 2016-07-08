@@ -59,6 +59,8 @@
     "react-addons-test-utils": "^15.0.0",
     "react-hot-loader": "^1.2.9",
     "react-slick": "^0.12.2",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
     "rimraf": "^2.4.3",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
